@@ -1,0 +1,137 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+  <div class="col">
+    <div class="shadow card text-center " style="width: 30rem;">
+      <h5 class="card-title" style="margin-top:2%;color:darkslategray">
+        Gender Classification
+      </h5>
+      <form id="upload-file-VGG16" method="post" enctype="multipart/form-data">
+        <div class="ii">
+          <div
+            class="img-preview text-center"
+            style="margin-left: 23%!important;"
+          >
+            <div id="imagePreviewVGG16"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row mx-auto">
+              <input
+                type="file"
+                name="file"
+                id="imageUploadVGG16"
+                accept=".png, .jpg, .jpeg"
+              />
+            </div>
+            <div class="row">
+              <div class="col">
+                <p class="card-text">
+                  Gender Identification is a small dataset designed to provide
+                  an idea about whether a person's gender can be predicted with
+                  an accuracy significantly above 50% based on their personal
+                  preferences..
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-top:5%">
+              <div class="col">
+                <label for="imageUploadVGG16" class="btn btn-secondary btn-lg">
+                  Choose...
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="button"
+              class="btn btn-dark btn-lg "
+              id="btn-predict-VGG16"
+              style="display:none;"
+            >
+              Predict
+            </button>
+            <div class="loaderVGG16" style="display:none;"></div>
+
+            <h3 id="resultVGG16">
+              <span> </span>
+            </h3>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="shadow card text-center " style="width: 30rem;">
+      <h5 class="card-title" style="margin-top:2%;color:darkslategray">
+        MPEG-7
+      </h5>
+      <form
+        id="upload-file-ResNet50"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="ii">
+          <div
+            class="img-preview text-center"
+            style="margin-left: 23%!important;"
+          >
+            <div id="imagePreviewResNet50"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row mx-auto">
+              <input
+                type="file"
+                name="file"
+                id="imageUploadResNet50"
+                accept=".png, .jpg, .jpeg"
+              />
+            </div>
+            <div class="row">
+              <div class="col">
+                <p class="card-text">
+                  MPEG-7 is a popular database for shape matching evaluation
+                  consisting of 70 shape categories, where each category is
+                  represented by 20 different images with high intra-class
+                  variability.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-top:5%">
+              <div class="col">
+                <label
+                  for="imageUploadResNet50"
+                  class="btn btn-secondary btn-lg"
+                >
+                  Choose...
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="button"
+              class="btn btn-dark btn-lg "
+              id="btn-predict-ResNet50"
+              style="display:none;"
+            >
+              Predict
+            </button>
+            <div class="loaderVGG16" style="display:none;"></div>
+
+            <h3 id="resultResNet50">
+              <span> </span>
+            </h3>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
